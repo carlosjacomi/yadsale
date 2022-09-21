@@ -30,6 +30,7 @@ body
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	width: 350px;
+	justify-items: center;
 }
 
 .logo
@@ -54,6 +55,39 @@ body
 	font-weight: 300;
 	margin: 0 0 40px 0;
 	text-align: center;
+}
+
+.email-image
+{
+	width: 132px;
+	height: 132px;
+	border-radius: 50%;
+	background-color: var(--text-input-field);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.email-image img
+{
+	width: 80px;
+}
+
+.resend
+{
+	font-size: var(--sm);
+}
+
+.resend span
+{
+	color: var(--very-light-pink);
+}
+
+.resend a
+{
+	color: var(--hospital-green);
+	text-decoration: none;
 }
 
 .form
