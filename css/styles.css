@@ -48,6 +48,12 @@ body
 	text-align: center;
 }
 
+h1.micuenta
+{
+	justify-self: left;
+	margin-bottom: 60px;
+}
+
 .subtitle
 {
 	color: var(--very-light-pink);
@@ -97,6 +103,12 @@ body
 	flex-direction: column;
 }
 
+.form div
+{
+	display: flex;
+	flex-direction: column;
+}
+
 form a
 {
 	color: var(--hospital-green);
@@ -124,6 +136,11 @@ form a
 	margin-bottom: 12px;
 }
 
+.input-name,.input-email, .input-passwrod
+{
+	margin-bottom: 22px;
+}
+
 .input email
 {
 	margin-bottom: 22px;
@@ -140,6 +157,7 @@ form a
 	font-size: var(--md);
 	font-weight: bold;
 	height: 50px;
+	text-align: center;
 }
 
 .secondary-button
@@ -165,5 +183,17 @@ form a
 	.logo {display: block;}
 
 	.signup-button { margin-top: 100px; }
+
+	.form-container
+	{
+		height: 100%;
+	}
+
+
+	.form
+	{
+		height: 100%;
+		justify-content: space-between;
+	}
 
 }
