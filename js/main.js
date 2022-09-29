@@ -6,27 +6,8 @@ const carritoIco = document.querySelector('.navbar-shopping-cart');
 const flechaCarrito = document.querySelector('.flecha-carrito');
 const detalleCarrito = document.querySelector('.carrito');
 const contenedorLista = document.querySelector('.cards-container');
-
-
-menuEmail.addEventListener('click',toggDesktopMenu);
-
-function toggDesktopMenu() {
-	menuDesk.classList.toggle('inactive');
-}
-
-menuIco.addEventListener('click',toggMobileMenu);
-
-function toggMobileMenu() {
-	menuMobile.classList.toggle('inactive');
-}
-
-carritoIco.addEventListener('click',toggCarrito);
-flechaCarrito.addEventListener('click',toggCarrito);
-
-
-function toggCarrito() {
-	detalleCarrito.classList.toggle('inactive');
-}
+const productDet = document.querySelector('.product-detail');
+const productDetClose = document.querySelector('.product-detail-close');
 
 const productList = [];
 
@@ -56,6 +37,8 @@ function render(arr) { //declaramos función
 
 		const productImg = document.createElement('img'); // Creamos img y lo guardamos en variable
 		productImg.setAttribute('src', product.img); // le asignamos la url dinámica que viene de los objetos product -> productList
+		productImg.classList.add('productList-img'); // le asignamos una clase
+
 
 		const productInfo = document.createElement('div'); //Creamos div y lo guardamos en variable
 		productInfo.classList.add('product-info'); // le asignamos una clase
@@ -89,3 +72,48 @@ function render(arr) { //declaramos función
 
 render(productList); //llamamos función
 
+
+
+menuEmail.addEventListener('click',toggDesktopMenu);
+menuIco.addEventListener('click',toggMobileMenu);
+carritoIco.addEventListener('click',toggCarrito);
+flechaCarrito.addEventListener('click',toggCarrito);
+productDetClose.addEventListener('click',closeProductInfo);
+
+
+
+const productImg = document.querySelectorAll('.productList-img');
+for (const pImg of productImg) { // se usa un for porque el selector es All
+  pImg.addEventListener('click', function openProductInfo() {
+    productDet.classList.remove('inactive');
+    detalleCarrito.classList.add('inactive');
+  });
+}
+
+function toggDesktopMenu() {
+	menuDesk.classList.toggle('inactive');
+}
+
+function toggMobileMenu() {
+	menuMobile.classList.toggle('inactive');
+}
+
+function toggCarrito() {
+	detalleCarrito.classList.toggle('inactive');
+    productDet.classList.add('inactive');
+}
+
+
+
+function closeProductInfo() {
+	productDet.classList.add('inactive');
+}
+
+
+/*condicional para cerrar carrito cuando se abra el detalle y viceversa
+
+function toggleDetails() {
+	detalleCarrito.classList.remove('inactive');
+	productDet.classList.add('inactive');
+	
+}*/
