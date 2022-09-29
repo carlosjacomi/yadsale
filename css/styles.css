@@ -1,3 +1,4 @@
+/*::::::::::::::VARIABLES:::::::::::::*/
 :root
 {
 	--very-light-pink: #c7c7c7;
@@ -10,12 +11,25 @@
 	--md: 18px;
 	--lg: 20px;
 }
+/*::::::::::::::VARIABLES:::::::::::::*/
 
+
+/*::::::::::::::GENERAL:::::::::::::*/
 body
 {
 	margin: 0;
 	font-family: 'Quicksand', sans-serif;
 }
+
+.inactive
+{
+	display: none !important;
+}
+
+/*::::::::::::::GENERAL:::::::::::::*/
+
+
+/*::::::::::::::HEADER (NAVBAR):::::::::::::*/
 
 .menu
 {
@@ -25,11 +39,6 @@ body
 .logo-nav
 {
 	width: 100px;
-}
-
-.inactive
-{
-	display: none !important;
 }
 
 nav
@@ -217,6 +226,67 @@ nav
 	font-size: var(--sm);
 }
 
+
+.product-detail
+{
+	background-color: var(--white);
+	width: 360px;
+	padding-bottom: 24px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 61px;
+	right: 0;
+}
+
+.carrito
+{
+	padding: 24px;
+}
+
+.product-detail .title
+{
+	font-size: var(--lg);
+	font-weight: bold;
+	text-align: start;
+}
+
+.product-detail-close 
+{
+	background-color: var(--white);
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	z-index: 2;
+	padding: 12px;
+	top:  14px;
+	left: 14px;
+	border-radius: 50%;
+}
+
+.product-detail-close:hover
+{
+	cursor: pointer;
+}
+
+.product-detail > img:nth-child(2)
+{
+	width: 360px;
+	height: 360px;
+	object-fit: cover;
+	border-radius: 0 0 20px 20px;
+}
+
+/*::::::::::::::HEADER (NAVBAR):::::::::::::*/
+
+
+/*::::::::::::::LISTA DE PRODUCTOS:::::::::::::*/
+
+.main-container
+{
+	margin-top: 14px;
+}
+
+
 .cards-container
 {
 	display: grid;
@@ -272,54 +342,10 @@ nav
 	color: var(--very-light-pink);
 }
 
-.product-detail
-{
-	background-color: var(--white);
-	width: 360px;
-	padding-bottom: 24px;
-	box-sizing: border-box;
-	position: absolute;
-	top: 61px;
-	right: 0;
-}
+/*::::::::::::::LISTA DE PRODUCTOS:::::::::::::*/
 
-.carrito
-{
-	padding: 24px;
-}
 
-.product-detail .title
-{
-	font-size: var(--lg);
-	font-weight: bold;
-	text-align: start;
-}
 
-.product-detail-close 
-{
-	background-color: var(--white);
-	width: 14px;
-	height: 14px;
-	position: absolute;
-	z-index: 2;
-	padding: 12px;
-	top:  14px;
-	left: 14px;
-	border-radius: 50%;
-}
-
-.product-detail-close:hover
-{
-	cursor: pointer;
-}
-
-.product-detail > img:nth-child(2)
-{
-	width: 360px;
-	height: 360px;
-	object-fit: cover;
-	border-radius: 0 0 20px 20px;
-}
 
 .product-info-detail
 {
