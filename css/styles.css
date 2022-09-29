@@ -27,6 +27,10 @@ body
 	width: 100px;
 }
 
+.inactive
+{
+	display: none;
+}
 
 nav
 {
@@ -76,6 +80,7 @@ nav
 
 .navbar-email
 {
+	cursor: pointer;
 	color: var(--very-light-pink);
 	font-size: var(--sm);
 	margin-right: 12px;
@@ -106,6 +111,10 @@ nav
 
 .desktop-menu
 {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	background-color: var(--white);
 	width: 100px;
 	height: auto;
 	border: 1px solid var(--very-light-pink);
